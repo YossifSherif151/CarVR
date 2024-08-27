@@ -36,18 +36,19 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void righttriggerpressed(InputAction.CallbackContext context)
     {
-        car_rb.velocity = new Vector3(0, 0, 5f);
+        car_rb.velocity = 5f * transform.forward;
     }
 
 
     private void righttriggerreleased(InputAction.CallbackContext context)
     {
         car_rb.velocity = Vector3.zero;
+        
     }
 
     private void lefttriggerpressed(InputAction.CallbackContext context)
     {
-        car_rb.velocity = new Vector3(0, 0, -5f);
+        car_rb.velocity = -5f * transform.forward;
     }
 
 
